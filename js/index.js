@@ -53,11 +53,15 @@ $(function(){
     $('#tableDataConsultar').html('');
     for (i = 0; i < d; i++) {
       console.log(d);
-      $('#tableDataConsultar').append('<tr>     <td>'+codigos[i]+'</td>      <td>'+nombres[i]+'</td>     <td>'+semestres[i]+'</td>       <td>'+correos[i]+'</td></tr>');
+      $('#tableDataConsultar').append('<tr>     <td>'+codigos[i]+'</td>      <td>'+nombres[i]+'</td>     <td>'+semestres[i]+'</td>  <td>'+correos[i]+'</td> <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-codigo='+i+'>Editar <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></td></tr>');
     };
   })
 
   $('#consulta').click(function(e){
     console.log(codigos)
   })
+
+  // $('#myModal').on('shown.bs.modal', function () {
+  //   $('#myInput').focus()
+  // })
 });

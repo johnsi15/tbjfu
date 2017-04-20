@@ -85,6 +85,43 @@
       <div class="col-md-4"></div>
     </div>
   </section>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Editar estudiante</h4>
+        </div>
+        <div class="modal-body">
+          <form id="formEditar">
+            <div class="form-group">
+              <label for="aggCodigo">Codigo</label>
+              <input type="text" class="form-control codigo" name="codigo" id="aggCodigo" autofocus placehorder="Codigo">
+            </div>
+            <div class="form-group">
+              <label for="editNombre">Nombre</label>
+              <input type="text" class="form-control nombre" id="editNombre" placehorder="Nombre">
+            </div>
+            <div class="form-group">
+              <label for="editSemestre">Semestre</label>
+              <input type="text" class="form-control semestre" id="editSemestre" placehorder="Semestre">
+            </div>
+            <div class="form-group">
+              <label for="editCorreo">Correo</label>
+              <input type="text" class="form-control correo" id="editCorreo" placehorder="Correo">
+            </div>
+            <!-- <button id="agregar" class="btn btn-default">Agregar</button>      
+            <button id="formAgregarCancelar" class="btn btn-danger">Cancelar</button>  -->     
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="editarEstu" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
