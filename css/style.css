@@ -1,0 +1,11 @@
+header{
+  height: 80px;
+  background-color: #F44336;
+  display: flex;
+  align-items: center;
+}
+
+h2{
+  color: #fff;
+  margin: 0 auto;
+}
