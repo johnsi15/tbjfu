@@ -25,16 +25,29 @@ $(function(){
     // console.log(codigos);
   });
 
+  function menu(){
+    $('#menu li').each(function(){
+      console.log('Hol');
+      if($(this).hasClass('active')){
+        $(this).removeClass();
+      }
+    });
+  }
+
   $('#btnAgregar').click(function(e){
     e.preventDefault();
     $('#tablaHistorico').hide();
     $('.consultar').hide();
     $('#formAgregar').show();
+    menu();
+    $('#menuAgregar').addClass('active');
   });
 
   $('#formAgregarCancelar').click(function(e){
     e.preventDefault();
     $('#formAgregar').hide();
+    menu();
+    $('#menuHome').addClass('active')
   });
 
   $('#btnHistorico').click(function(e){
@@ -42,6 +55,8 @@ $(function(){
     $('#formAgregar').hide();
     $('.consultar').hide();
     $('#tablaHistorico').show();
+    menu();
+    $('#menuHistorico').addClass('active');
 
     var d = codigosHistorico.length;
     $('#tableData').html('');
@@ -57,6 +72,8 @@ $(function(){
     $('#tablaHistorico').hide();
     $('#formAgregar').hide();
     $('.consultar').show();
+    menu();
+    $('#menuConsultar').addClass('active');
     var d = codigos.length;
     $('#tableDataConsultar').html('');
     for (i = 0; i < d; i++) {
